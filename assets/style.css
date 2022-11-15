@@ -100,27 +100,19 @@
 }
 
 
-#homeDot::after{
+
+#homeDot::before{
     font-size: 300%;
-    position: absolute;
-    top: -36px;
-    left: -5px;
     content: "\2022";
 }
 
-#projectsDot::after {
+#projectsDot::before {
     font-size: 300%;
-    position: absolute;
-    top: 12px;
-    left: -5px;
     content: "\2022";
 }
 
-#infoDot::after {
+#infoDot::before {
     font-size: 300%;
-    position: absolute;
-    top: 62px;
-    left: -5px;
     content: "\2022";
 }
 
@@ -229,12 +221,6 @@
     }
 }
 
-@media screen and (max-width: 374px) {
-    .projects {
-        right: calc(var(--pad)*1);
-    }
-}
-
 @media screen and (max-width: 500px) {
     .project-info {
         font-size: 50%;
@@ -251,5 +237,17 @@
     #frame {
         height: 95vh;
         width: 89%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #header {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .projects {
+        right: calc(var(--pad)*1);
     }
 }
