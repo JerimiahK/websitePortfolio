@@ -116,7 +116,7 @@
     content: "\2022";
 }
 
-#navbar-item:hover {
+#navbar-item a:hover {
     opacity: 30%;
     color: white;
     transition: 0.4s;
