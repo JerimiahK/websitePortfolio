@@ -1,0 +1,255 @@
+:root {
+    --pad: max(20px, 4vmin);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: hwb(0 5% 95%);
+}
+
+#frame {
+    height: 92vh;
+    width: 95%;
+    border-width: .001em; border-color: white;border-color: rgb(255, 255, 255);
+    border-style: solid;
+    margin: 2px;
+    position: fixed;
+    left: var(--pad);
+    right: var(--pad);
+    top: var(--pad);
+    bottom: var(--pad);
+}
+
+#header {
+    position: fixed;
+    z-index: 999;
+    left: calc(var(--pad)*2);
+    top: calc(var(--pad)*2);
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+#header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 300%;
+}
+
+#header p {
+    font-style: italic;
+}
+
+.nav {
+    margin-top: 50px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+}
+
+#navbar-item {
+    list-style-type: none;
+}
+
+#navbar-item a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 85%;
+}
+
+.content {
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.inner-content {
+    position: relative;
+    min-height: 100%;
+}
+
+.page {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+}
+
+.home {
+    position: absolute;
+    right: calc(var(--pad)*2);
+    bottom: calc(var(--pad)*1.5);
+    white-space: nowrap;
+}
+
+
+#homeDot::after{
+    font-size: 300%;
+    position: absolute;
+    top: -36px;
+    left: -5px;
+    content: "\2022";
+}
+
+#projectsDot::after {
+    font-size: 300%;
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    content: "\2022";
+}
+
+#infoDot::after {
+    font-size: 300%;
+    position: absolute;
+    top: 62px;
+    left: -5px;
+    content: "\2022";
+}
+
+#navbar-item:hover {
+    opacity: 30%;
+    color: white;
+    transition: 0.4s;
+}
+
+.about-me {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    color: white;
+    font-size: 90%;
+    padding-right: 20px;
+} 
+
+.motto {
+    font-family: 'Cinzel', serif;
+    font-size: 90%;
+    font-style: italic;
+    color: #ddaefd;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: calc(var(--pad)*3);
+    bottom: calc(var(--pad)*2);
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: baseline;
+    column-gap: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.project-item:hover{
+    transition: 0.4s;
+    opacity: 30%;
+    color: #fff;
+}
+
+.project-title {
+    font-size: 300%;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-info{
+    font-family: 'Lato', sans-serif;
+}
+
+.info {
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: calc(var(--pad)*3);
+    bottom: calc(var(--pad)*2);
+    padding-right: 10px;
+}
+
+.info-item {
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.info-item:hover {
+    transition: 0.4s;
+    opacity: 30%;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .project-title {
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .project-title {
+        font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-title {
+        font-size: 85%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .projects {
+        right: calc(var(--pad)*1);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-info {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects{
+        bottom: calc(var(--pad)*3);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #frame {
+        height: 95vh;
+        width: 89%;
+    }
+}
