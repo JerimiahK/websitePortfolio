@@ -229,6 +229,7 @@
 
 @media screen and (max-width: 500px) {
     .projects{
+        line-height: 2;
         bottom: calc(var(--pad)*3);
     }
 }
