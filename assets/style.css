@@ -235,14 +235,26 @@
 
 @media screen and (max-width: 500px) {
     #frame {
-        height: 95vh;
+        height: 91vh;
         width: 89%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #frame {
+        width: 87%;
     }
 }
 
 @media screen and (max-width: 450px) {
     #header {
         font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #header {
+        font-size: 65%;
     }
 }
 
