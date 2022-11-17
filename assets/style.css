@@ -355,7 +355,7 @@
 
 @media screen and (max-width: 500px) {
     #frame {
-        height: 87vh;
+        height: 85vh;
         width: 89%;
     }
 }
@@ -405,12 +405,6 @@
 @media screen and (max-width: 425px) {
     #navbar-item {
         font-size: 130%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    #frame {
-        height: 82vh;
     }
 }
 
