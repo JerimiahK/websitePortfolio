@@ -8,8 +8,48 @@
     box-sizing: border-box;
 }
 
+.intro-page {
+    background-color: black;
+    animation: fade-out 7s ease-out;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 300%;
+}
+
+#intro-text {
+    font-size: 80%;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+#italic-intro {
+    font-size: 105%;
+    color: #fff;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+/* #canvas {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+    background-color: hsl(0, 0%, 5%);
+} */
+
 #page {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,9 +59,12 @@
 }
 
 #frame {
+    animation: fade-in 3s linear;
     height: 92vh;
     width: 95%;
-    border-width: .001em; border-color: white;border-color: rgb(255, 255, 255);
+    border-width: .001em;
+    border-color: white;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     margin: 2px;
     position: fixed;
@@ -32,8 +75,9 @@
 }
 
 #header {
+    animation: fade-in 3s linear;
     position: fixed;
-    z-index: 999;
+    z-index: 900;
     left: calc(var(--pad)*2);
     top: calc(var(--pad)*2);
     color: #fff;
@@ -99,19 +143,32 @@
     white-space: nowrap;
 }
 
+.homeButton {
+    animation: fade-in 1s linear;
+}
 
+.projectsButton {
+    animation: fade-in 1s linear;
+}
 
-#homeDot::before{
+.infoButton {
+    animation: fade-in 1s linear;
+}
+
+#homeDot::before {
+    animation: fade-in .5s linear;
     font-size: 300%;
     content: "\2022";
 }
 
 #projectsDot::before {
+    animation: fade-in .5s linear;
     font-size: 300%;
     content: "\2022";
 }
 
 #infoDot::before {
+    animation: fade-in .5s linear;
     font-size: 300%;
     content: "\2022";
 }
@@ -130,7 +187,11 @@
     color: white;
     font-size: 90%;
     padding-right: 20px;
-} 
+}
+
+.home {
+    animation: fade-in 3s linear;
+}
 
 .motto {
     font-family: 'Cinzel', serif;
@@ -140,6 +201,7 @@
 }
 
 .projects {
+    animation: fade-in 3s linear;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -159,7 +221,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.project-item:hover{
+.project-item:hover {
     transition: 0.4s;
     opacity: 30%;
     color: #fff;
@@ -171,11 +233,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.project-info{
+.project-info {
     font-family: 'Lato', sans-serif;
 }
 
 .info {
+    animation: fade-in 3s linear;
     line-height: 2;
     display: flex;
     flex-direction: column;
@@ -203,15 +266,71 @@
     display: none;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .project-title {
         font-size: 200%;
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .project-title {
         font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-me {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro-text {
+        font-size: 50%;
     }
 }
 
@@ -228,7 +347,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .projects{
+    .projects {
         line-height: 2;
         bottom: calc(var(--pad)*3);
     }
@@ -256,6 +375,30 @@
 @media screen and (max-width: 450px) {
     #header {
         font-size: 65%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .info-item {
+        font-size: 125%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #intro-text {
+        font-size: 35%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-me {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .project-title {
+        font-size: 60%;
     }
 }
 
