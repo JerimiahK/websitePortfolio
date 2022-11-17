@@ -362,7 +362,7 @@
 
 @media screen and (max-width: 500px) {
     #navbar-item {
-        font-size: 150%;
+        font-size: 200%;
     }
 }
 
@@ -398,7 +398,7 @@
 
 @media screen and (max-width: 425px) {
     .about-me {
-        font-size: 70%;
+        font-size: 100%;
     }
 }
 
