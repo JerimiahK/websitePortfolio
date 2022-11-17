@@ -10,7 +10,7 @@
 
 .intro-page {
     background-color: black;
-    animation: fade-out 7s ease-out;
+    animation: fade-out 4s ease-out;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
@@ -330,7 +330,7 @@
 
 @media screen and (max-width: 768px) {
     #intro-text {
-        font-size: 50%;
+        font-size: 80%;
     }
 }
 
@@ -410,7 +410,7 @@
 
 @media screen and (max-width: 425px) {
     #navbar-item {
-        font-size: 110%;
+        font-size: 130%;
     }
 }
 
