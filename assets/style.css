@@ -8,17 +8,10 @@
     box-sizing: border-box;
 }
 
-.intro-page {
-    background-color: black;
-    animation: fade-out 4s ease-out;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    opacity: 0;
+#cover {
+    animation-duration: 4s;
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     height: 100vh;
@@ -26,7 +19,27 @@
     font-size: 300%;
 }
 
-#intro-text {
+#cover .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    pointer-events: none;
+}
+
+#cover .wrapper {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    pointer-events: none;
+}
+
+#cover-text {
     font-size: 80%;
     color: #fff;
     font-family: 'Raleway', sans-serif;
